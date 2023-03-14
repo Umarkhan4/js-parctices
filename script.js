@@ -8,16 +8,16 @@
 
 // let lovePercentage = Math.random() * 100;
 
-// lovePercentage = Math.floor(lovePercentage)+1;
-// alert(lovePercentage);
+lovePercentage = Math.floor(lovePercentage)+1;
+alert(lovePercentage);
 // practising the js 
-// const age=15;
-// if(age>=18){
-// console.log('Good you can drive Now👍');
-// } else{
-//    let yearLeft = 18-age;
-// console.log('you have '+ yearLeft + ' years left to drive');
-// }
+const age=15;
+if(age>=18){
+console.log('Good you can drive Now👍');
+} else{
+   let yearLeft = 18-age;
+console.log('you have '+ yearLeft + ' years left to drive');
+}
 let massMark = 93;
 let heightMark = 1.88;
 let massJon = 83;
