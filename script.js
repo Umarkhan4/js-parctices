@@ -60,39 +60,51 @@
 //     console.log('Both the teams has won');
 
 //   }
-let day ='monday';
-switch (day)  {
-    case  'monday':
-        console.log('the first dY OF THE WEEK');
-        break;
-        case  'Tuesday':
-        console.log('the mazay dY OF THE WEEK');
-        break;
-        case  'wednesday':
-        console.log('the gusht dY OF THE WEEK');
-        break;
-        case  'Thursday':
-        console.log('the outting dY OF THE WEEK');
-        break;
-        case  'Friday':
-            case  'Saturday':
-                case  'sunday':
-        console.log('the Last days OF THE WEEK');
-        break;
-        default:
-            console.log('invalid input');
-}
-let weekDays ='Friday';
-  if(weekDays=== 'monday'){
-    console.log('the first dY OF THE WEEK');
-  }else if(weekDays === 'tuesday'){
-    console.log('the mazay dY OF THE WEEK');
-  }else if(weekDays === 'Wednesday'){
-    console.log('the gusht dY OF THE WEEK');
-  }else if(weekDays === 'thursday'){
-    console.log('the outting dY OF THE WEEK');
-  }else if(weekDays === 'Friday' || weekDays ==='saturday'||weekDays === 'sunday'){
-    console.log('the Last days OF THE WEEK');
-  }else{
-    console.log('invalid');
-  }
+// let day ='monday';
+// switch (day)  {
+//     case  'monday':
+//         console.log('the first dY OF THE WEEK');
+//         break;
+//         case  'Tuesday':
+//         console.log('the mazay dY OF THE WEEK');
+//         break;
+//         case  'wednesday':
+//         console.log('the gusht dY OF THE WEEK');
+//         break;
+//         case  'Thursday':
+//         console.log('the outting dY OF THE WEEK');
+//         break;
+//         case  'Friday':
+//             case  'Saturday':
+//                 case  'sunday':
+//         console.log('the Last days OF THE WEEK');
+//         break;
+//         default:
+//             console.log('invalid input');
+// }
+// let weekDays ='Friday';
+//   if(weekDays=== 'monday'){
+//     console.log('the first dY OF THE WEEK');
+//   }else if(weekDays === 'tuesday'){
+//     console.log('the mazay dY OF THE WEEK');
+//   }else if(weekDays === 'Wednesday'){
+//     console.log('the gusht dY OF THE WEEK');
+//   }else if(weekDays === 'thursday'){
+//     console.log('the outting dY OF THE WEEK');
+//   }else if(weekDays === 'Friday' || weekDays ==='saturday'||weekDays === 'sunday'){
+//     console.log('the Last days OF THE WEEK');
+//   }else{
+//     console.log('invalid');
+//   }
+// let bill = 275;
+// if(bill >= 50 && bill < 300){
+//    tip = (15/100)*bill;
+//   console.log( " Bill "+ bill+" and Tip is "+ tip+" Total bill "+ (bill+tip));
+// }else if(bill >300){
+//   tip = (20/100)*bill;
+//   console.log( " Bill "+ bill+" and Tip is "+ tip+" Total bill "+ (bill+tip));
+// }     
+
+ const bill = 275;
+ const tip = bill <=300 && bill >=50 ? bill*0.15 : bill *0.2; 
+ console.log('your bill was ${bill}, your tip was ${tip}, an total value is ${bill + tip}');
