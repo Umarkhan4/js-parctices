@@ -105,6 +105,16 @@
 //   console.log( " Bill "+ bill+" and Tip is "+ tip+" Total bill "+ (bill+tip));
 // }     
 
- const bill = 275;
- const tip = bill <=300 && bill >=50 ? bill*0.15 : bill *0.2; 
- console.log(`your bill was ${bill}, your tip was ${tip}, an total value is ${bill + tip}`);
+//  const bill = 375;
+//  const tip = bill <=300 && bill >=50 ? bill*0.15 : bill *0.2; 
+//  console.log(`your bill was ${bill}, your tip was ${tip}, an total value is ${bill + tip}`);
+
+ function fruitProcessero ( apples, oranges){
+    const jucie = `jucies of ${apples} apples and juice of ${oranges} oranges is ready to drink `
+    return jucie;
+
+ }
+ const applesJucie = fruitProcessero(8,9);
+ console.log (applesJucie); 
+ const num = '34';
+ console.log(num);
