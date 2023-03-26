@@ -109,12 +109,38 @@
 //  const tip = bill <=300 && bill >=50 ? bill*0.15 : bill *0.2; 
 //  console.log(`your bill was ${bill}, your tip was ${tip}, an total value is ${bill + tip}`);
 
- function fruitProcessero ( apples, oranges){
-    const jucie = `jucies of ${apples} apples and juice of ${oranges} oranges is ready to drink `
-    return jucie;
+//  function fruitProcessero ( apples, oranges){
+//     const jucie = `jucies of ${apples} apples and juice of ${oranges} oranges is ready to drink `
+//     return jucie;
 
- }
- const applesJucie = fruitProcessero(8,9);
- console.log (applesJucie); 
- const num = '34';
- console.log(num);
+//  }
+//  const applesJucie = fruitProcessero(8,9);
+//  console.log (applesJucie); 
+//  const num = '34';
+//  console.log(num);
+  
+//function declarartions "you can call the declaration fuction before declaring"
+// function calAge1(brithYear){
+//     return 2023 - brithYear;
+// }
+// const age1=calAge1(1999);//() in these brackets you give the aurgument/input and pirmetter.
+// console.log(age1);
+// //function expression'you have to declare the function and then you can call it' and the best parctice is to use expression fuctions 
+// const age2=function(brithYear){
+//     return 2023 -brithYear;
+// }
+// const calAge2=age2(1998);
+// console.log(calAge2);
+//arrow functions for one linears 
+const calAge3=birthYear =>2023 - birthYear;
+const age=calAge3(1991);
+console.log(age);
+// mult lines arrow function
+const calAge4=(birthYear,Name)=>{
+    const age= 2023-birthYear;
+    const retarimentAge = 65-age;
+    return `${Name} you have ${retarimentAge} years left to get retaired...`;
+}
+const findAge=calAge4(1999,"umar");
+const findAge1=calAge4(1979,"Mohsin");
+console.log(findAge,findAge1);
