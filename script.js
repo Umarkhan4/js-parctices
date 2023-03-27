@@ -131,16 +131,30 @@
 // }
 // const calAge2=age2(1998);
 // console.log(calAge2);
-//arrow functions for one linears 
-const calAge3=birthYear =>2023 - birthYear;
-const age=calAge3(1991);
-console.log(age);
-// mult lines arrow function
-const calAge4=(birthYear,Name)=>{
-    const age= 2023-birthYear;
-    const retarimentAge = 65-age;
-    return `${Name} you have ${retarimentAge} years left to get retaired...`;
-}
-const findAge=calAge4(1999,"umar");
-const findAge1=calAge4(1979,"Mohsin");
-console.log(findAge,findAge1);
+//*********arrow functions for one linears 
+// const calAge3=birthYear =>2023 - birthYear;
+// const age=calAge3(1991);
+// console.log(age);
+// // **********mult lines arrow function
+// const calAge4=(birthYear,Name)=>{
+//     const age= 2023-birthYear;
+//     const retarimentAge = 65-age;
+//     return `${Name} you have ${retarimentAge} years left to get retaired...`;
+// }
+// const findAge=calAge4(1999,"umar");
+// const findAge1=calAge4(1979,"Mohsin");
+// console.log(findAge,findAge1);
+// ************function calling another function*********** .
+     function cutFruitpieces(fruits){
+        return fruits *2;
+
+     }
+  function fruitProcessero ( apples, oranges){
+    let applespieces =  cutFruitpieces(apples);
+          let orangepieces = cutFruitpieces(oranges);
+         const jucie = `jucies of ${applespieces} apples and juice of ${orangepieces} oranges is ready to drink `
+        return jucie;
+    
+      }
+  const applesJucie = fruitProcessero(3,2);
+      console.log (applesJucie); 
