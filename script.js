@@ -145,16 +145,36 @@
 // const findAge1=calAge4(1979,"Mohsin");
 // console.log(findAge,findAge1);
 // ************function calling another function*********** .
-     function cutFruitpieces(fruits){
-        return fruits *2;
+//      function cutFruitpieces(fruits){
+//         return fruits *2;
 
-     }
-  function fruitProcessero ( apples, oranges){
-    let applespieces =  cutFruitpieces(apples);
-          let orangepieces = cutFruitpieces(oranges);
-         const jucie = `jucies of ${applespieces} apples and juice of ${orangepieces} oranges is ready to drink `
-        return jucie;
+//      }
+//   function fruitProcessero ( apples, oranges){
+//     let applespieces =  cutFruitpieces(apples);
+//           let orangepieces = cutFruitpieces(oranges);
+//          const jucie = `jucies of ${applespieces} apples and juice of ${orangepieces} oranges is ready to drink `
+//         return jucie;
     
-      }
-  const applesJucie = fruitProcessero(3,2);
-      console.log (applesJucie); 
+//       }
+//   const applesJucie = fruitProcessero(3,2);
+//       console.log (applesJucie); 
+const calAvager = (num,num2,num3)=>(num+num2+num3)/3;
+let Doliphinscore= calAvager(44,23,71);
+let Koalessave= calAvager(65,49,54);
+   
+
+const checkWinner = function(avgDolphin,avgKoales){
+   if(avgDolphin >=2 * avgKoales){
+      console.log(`The dolphine win 🎉(${avgDolphin}) vs (${avgKoales})`);
+
+   } else if(avgKoales >=2 * avgDolphin){
+
+      console.log(`The Koales win🎉(${avgKoales}) vs (${avgDolphin})`);
+}else{
+   console.log('noone win');
+}
+};
+checkWinner(Doliphinscore,Koalessave);
+Doliphinscore= calAvager(85,54,41);
+Koalessave= calAvager(23,34,27);
+checkWinner(Doliphinscore,Koalessave);
