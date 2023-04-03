@@ -158,23 +158,64 @@
 //       }
 //   const applesJucie = fruitProcessero(3,2);
 //       console.log (applesJucie); 
-const calAvager = (num,num2,num3)=>(num+num2+num3)/3;
-let Doliphinscore= calAvager(44,23,71);
-let Koalessave= calAvager(65,49,54);
+// const calAvager = (num,num2,num3)=>(num+num2+num3)/3;
+// let Doliphinscore= calAvager(44,23,71);
+// let Koalessave= calAvager(65,49,54);
    
 
-const checkWinner = function(avgDolphin,avgKoales){
-   if(avgDolphin >=2 * avgKoales){
-      console.log(`The dolphine win 🎉(${avgDolphin}) vs (${avgKoales})`);
+// const checkWinner = function(avgDolphin,avgKoales){
+//    if(avgDolphin >=2 * avgKoales){
+//       console.log(`The dolphine win 🎉(${avgDolphin}) vs (${avgKoales})`);
 
-   } else if(avgKoales >=2 * avgDolphin){
+//    } else if(avgKoales >=2 * avgDolphin){
 
-      console.log(`The Koales win🎉(${avgKoales}) vs (${avgDolphin})`);
-}else{
-   console.log('noone win');
-}
-};
-checkWinner(Doliphinscore,Koalessave);
-Doliphinscore= calAvager(85,54,41);
-Koalessave= calAvager(23,34,27);
-checkWinner(Doliphinscore,Koalessave);
+//       console.log(`The Koales win🎉(${avgKoales}) vs (${avgDolphin})`);
+// }else{
+//    console.log('noone win');
+// }
+// };
+// checkWinner(Doliphinscore,Koalessave);
+// Doliphinscore= calAvager(85,54,41);
+// Koalessave= calAvager(23,34,27);
+// checkWinner(Doliphinscore,Koalessave);
+// ******Arrays*******
+// const calAge = function(birthYear){
+//    return 2037 - birthYear;
+// }
+// const friends = [1990,2000,2004];
+// const ages = calAge(friends[0]);
+// const ages1 = calAge(friends[1]);
+// const ages2= calAge(friends[friends.length-1]);
+// console.log(ages,ages1,ages2);
+// //using array with in an array**********
+// const preSent =[calAge(friends[0]),calAge(friends[1]),calAge(friends[friends.length-1])];
+// console.log(preSent);
+// // Adding elements to arrays by push, pop, unshift ,shift,******
+// const yaar=['mohsin' ,'usama', 'umar' , 'sibi',];
+// console.log(yaar);
+// yaar.push('sunny');
+// console.log(yaar);
+// yaar.unshift('Adana');
+// console.log(yaar);
+// yaar.pop();
+// console.log(yaar);
+// yaar.shift();
+// console.log(yaar);
+// if(yaar.includes('usama')){
+//    console.log('you have a friend name Usama...')
+// }
+const tipCal =function(bill){ 
+   
+if(bill >= 50 && bill < 300){
+      let tipAbove50 = tip =Math.floor( (15/100)*bill);
+      console.log( " Bill is "+ bill+" and Tip is "+ tip+" Total bill is "+ (bill+tip));
+    }else if(bill >300){
+      let tipAbove300 =tip = Math.floor((20/100)*bill);
+      console.log( " Bill is "+ bill+" and Tip is "+ tip+" Total bill is "+ (bill+tip));
+    } }
+    console.log (tipCal(100));
+    const bills=[125,555,424];
+    const tips = [tipCal(bills[0]),tipCal(bills[1]), tipCal(bills[bills.length-1])];
+    console.log(tips);
+   //  let total =[(bill+tip)[0],];
+   //  console.log(total);
