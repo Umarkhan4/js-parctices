@@ -204,18 +204,42 @@
 // if(yaar.includes('usama')){
 //    console.log('you have a friend name Usama...')
 // }
-const tipCal =function(bill){ 
+// const tipCal =function(bill){ 
    
-if(bill >= 50 && bill < 300){
-      let tipAbove50 = tip =Math.floor( (15/100)*bill);
-      console.log( " Bill is "+ bill+" and Tip is "+ tip+" Total bill is "+ (bill+tip));
-    }else if(bill >300){
-      let tipAbove300 =tip = Math.floor((20/100)*bill);
-      console.log( " Bill is "+ bill+" and Tip is "+ tip+" Total bill is "+ (bill+tip));
-    } }
-    console.log (tipCal(100));
-    const bills=[125,555,424];
-    const tips = [tipCal(bills[0]),tipCal(bills[1]), tipCal(bills[bills.length-1])];
-    console.log(tips);
-   //  let total =[(bill+tip)[0],];
-   //  console.log(total);
+// if(bill >= 50 && bill < 300){
+//       let tipAbove50 = tip =Math.floor( (15/100)*bill);
+//       console.log( " Bill is "+ bill+" and Tip is "+ tip+" Total bill is "+ (bill+tip));
+//     }else if(bill >300){
+//       let tipAbove300 =tip = Math.floor((20/100)*bill);
+//       console.log( " Bill is "+ bill+" and Tip is "+ tip+" Total bill is "+ (bill+tip));
+//     } }
+//     console.log (tipCal(100));
+    // const caltip = function (bill){
+    //   return bill >=50 && bill <=300 ? bill * 0.15 : bill * 0.2
+    // }
+
+    // const bills=[125,555,44];
+    // const tips = [caltip(bills[0]),caltip(bills[1]), caltip(bills[2])];
+    // // console.log(tips);
+    // const total = [bills[0] + tips[0] ,bills[1]+tips[1] ,bills[2]+tips[2]];
+    // console.log(total,tips,bills);
+    // *****Object*****
+    const Umar={
+      firstName : "umar",
+      lastName : "khan",
+      age : 2050-1999,
+      job :"webdevloper",
+      friend :['mohsin','usama','sunny'],
+    };
+    // calling the properties from thr object........
+    // console.log(Umar["age"]);
+    // // const interstedIn=prompt('Hi, what do you what to know about umar');
+    // if (Umar[interstedIn]){
+    // console.log(Umar[interstedIn]);
+    // } else {
+    //   console.log('please chose the right option');
+    // };
+    // Umar.location="pakistan";
+    // Umar["twitter"]='umerkhan@788';
+    // console.log(Umar);
+    console.log(`${Umar.firstName} has ${Umar.friend.length} friends and his best friend is ${Umar.friend[0]}....`);
