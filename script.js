@@ -223,23 +223,39 @@
     // // console.log(tips);
     // const total = [bills[0] + tips[0] ,bills[1]+tips[1] ,bills[2]+tips[2]];
     // console.log(total,tips,bills);
-    // *****Object*****
+    // // *****Object*****
+    // const Umar={
+    //   firstName : "umar",
+    //   lastName : "khan",
+    //   age : 2050-1999,
+    //   job :"webdevloper",
+    //   friend :['mohsin','usama','sunny'],
+    // };
+    // // calling the properties from thr object........
+    // // console.log(Umar["age"]);
+    // // // const interstedIn=prompt('Hi, what do you what to know about umar');
+    // // if (Umar[interstedIn]){
+    // // console.log(Umar[interstedIn]);
+    // // } else {
+    // //   console.log('please chose the right option');
+    // // };
+    // // Umar.location="pakistan";
+    // // Umar["twitter"]='umerkhan@788';
+    // // console.log(Umar);
+    // console.log(`${Umar.firstName} has ${Umar.friend.length} friends and his best friend is ${Umar.friend[0]}....`);
+    // // methodes pratcies****
     const Umar={
       firstName : "umar",
       lastName : "khan",
-      age : 2050-1999,
+      birthYear : 1999,
       job :"webdevloper",
       friend :['mohsin','usama','sunny'],
+     calAge : function(){
+      this.age = 2030 - this.birthYear;
+      return this.age;
+     },
+     getsummary:function (){
+      return`this.umar`} 
     };
-    // calling the properties from thr object........
-    // console.log(Umar["age"]);
-    // // const interstedIn=prompt('Hi, what do you what to know about umar');
-    // if (Umar[interstedIn]){
-    // console.log(Umar[interstedIn]);
-    // } else {
-    //   console.log('please chose the right option');
-    // };
-    // Umar.location="pakistan";
-    // Umar["twitter"]='umerkhan@788';
-    // console.log(Umar);
-    console.log(`${Umar.firstName} has ${Umar.friend.length} friends and his best friend is ${Umar.friend[0]}....`);
+
+    console.log(Umar.age);
