@@ -249,13 +249,14 @@
       lastName : "khan",
       birthYear : 1999,
       job :"webdevloper",
+      Drivinglicence:true,
       friend :['mohsin','usama','sunny'],
      calAge : function(){
       this.age = 2030 - this.birthYear;
       return this.age;
      },
      getsummary:function (){
-      return`this.umar`} 
+      return`${this.Umar} is a ${this.calAge} years old and has a ${this.Drivinglicence}?a:"no "driving licence`} 
     };
 
-    console.log(Umar.age);
+    console.log(Umar.getsummary);
