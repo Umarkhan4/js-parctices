@@ -244,19 +244,19 @@
     // // console.log(Umar);
     // console.log(`${Umar.firstName} has ${Umar.friend.length} friends and his best friend is ${Umar.friend[0]}....`);
     // // methodes pratcies****
-    const Umar={
-      firstName : "umar",
-      lastName : "khan",
-      birthYear : 1999,
-      job :"webdevloper",
-      Drivinglicence:true,
+    const Umar = {
+      firstName : 'umar',
+      lastName : 'khan',
+      birthYear : 1991,
+      job :'webdevloper',
       friend :['mohsin','usama','sunny'],
+      Drivinglicence:false,
      calAge : function(){
-      this.age = 2030 - this.birthYear;
+      this.age = 2037 - this.birthYear;
       return this.age;
      },
      getsummary:function (){
-      return`${this.Umar} is a ${this.calAge} years old and has a ${this.Drivinglicence}?a:"no "driving licence`} 
+      return `${this.firstName} is a ${this.calAge()} years old ${this.job} and has  ${this.Drivinglicence?'a ' :'no '}driving licence`},
     };
 
-    console.log(Umar.getsummary);
+    console.log(Umar.getsummary());
