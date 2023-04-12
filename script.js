@@ -258,5 +258,38 @@
      getsummary:function (){
       return `${this.firstName} is a ${this.calAge()} years old ${this.job} and has  ${this.Drivinglicence?'a ' :'no '}driving licence`},
     };
-
+    Umar.friend.push('khan');
+    console.log(Umar);
     console.log(Umar.getsummary());
+
+    const Markmiler = {
+      firstName : 'Mark',
+      lastName : 'Miler',
+      mass :'78',
+      height : '1.69',
+      calBMI : function(){
+        this.BMI=Math.floor( this.mass / this.height **2);
+         return this.BMI;
+       },
+       getdetails:function(){
+        return`${this.firstName} BMI ${this.calBMI()} `
+      }
+     }
+     const jonasmith = {
+      firstName : 'jonas',
+      lastName : 'smith',
+      mass :'92',
+      height : '1.9',
+      calBMI : function(){
+       this.BMI=Math.floor( this.mass / this.height **2);
+        return this.BMI;
+      },
+      getdetails:function(){
+        return`${this.firstName} BMI ${this.calBMI()} `
+      }
+     }
+     if(jonasmith.BMI>Markmiler.BMI){
+      console.log()
+     }
+     console.log(jonasmith.getdetails());
+     console.log(Markmiler.getdetails());
