@@ -244,24 +244,24 @@
     // // console.log(Umar);
     // console.log(`${Umar.firstName} has ${Umar.friend.length} friends and his best friend is ${Umar.friend[0]}....`);
     // // methodes pratcies****
-    const Umar = {
-      firstName : 'umar',
-      lastName : 'khan',
-      birthYear : 1991,
-      job :'webdevloper',
-      friend :['mohsin','usama','sunny'],
-      Drivinglicence:false,
-     calAge : function(){
-      this.age = 2037 - this.birthYear;
-      return this.age;
-     },
-     getsummary:function (){
-      return `${this.firstName} is a ${this.calAge()} years old ${this.job} and has  ${this.Drivinglicence?'a ' :'no '}driving licence`},
-    };
-    Umar.friend.push('khan');
-    console.log(Umar);
-    console.log(Umar.getsummary());
-
+    // const Umar = {
+    //   firstName : 'umar',
+    //   lastName : 'khan',
+    //   birthYear : 1991,
+    //   job :'webdevloper',
+    //   friend :['mohsin','usama','sunny'],
+    //   Drivinglicence:false,
+    //  calAge : function(){
+    //   this.age = 2037 - this.birthYear;
+    //   return this.age;
+    //  },
+    //  getsummary:function (){
+    //   return `${this.firstName} is a ${this.calAge()} years old ${this.job} and has  ${this.Drivinglicence?'a ' :'no '}driving licence`},
+    // };
+    // Umar.friend.push('khan');
+    // console.log(Umar);
+    // console.log(Umar.getsummary());
+//*************challange*************/
     const Markmiler = {
       firstName : 'Mark',
       lastName : 'Miler',
@@ -287,9 +287,12 @@
       getdetails:function(){
         return`${this.firstName} BMI ${this.calBMI()} `
       }
-     }
-     if(jonasmith.BMI>Markmiler.BMI){
-      console.log()
-     }
+     };
      console.log(jonasmith.getdetails());
      console.log(Markmiler.getdetails());
+     if(jonasmith.BMI > Markmiler.BMI){
+      console.log(`jona BMI is ${jonasmith.BMI} greater`)
+     }else{
+      console.log(`mark has ${Markmiler.BMI} greater BMI`);
+     };
+    //  ************************
