@@ -262,37 +262,63 @@
     // console.log(Umar);
     // console.log(Umar.getsummary());
 //*************challange*************/
-    const Markmiler = {
-      firstName : 'Mark',
-      lastName : 'Miler',
-      mass :'78',
-      height : '1.69',
-      calBMI : function(){
-        this.BMI=Math.floor( this.mass / this.height **2);
-         return this.BMI;
-       },
-       getdetails:function(){
-        return`${this.firstName} BMI ${this.calBMI()} `
-      }
-     }
-     const jonasmith = {
-      firstName : 'jonas',
-      lastName : 'smith',
-      mass :'92',
-      height : '1.9',
-      calBMI : function(){
-       this.BMI=Math.floor( this.mass / this.height **2);
-        return this.BMI;
-      },
-      getdetails:function(){
-        return`${this.firstName} BMI ${this.calBMI()} `
-      }
-     };
-     console.log(jonasmith.getdetails());
-     console.log(Markmiler.getdetails());
-     if(jonasmith.BMI > Markmiler.BMI){
-      console.log(`jona BMI is ${jonasmith.BMI} greater`)
-     }else{
-      console.log(`mark has ${Markmiler.BMI} greater BMI`);
-     };
-    //  ************************
+    // const Markmiler = {
+    //   firstName : 'Mark',
+    //   lastName : 'Miler',
+    //   mass :'78',
+    //   height : '1.69',
+    //   calBMI : function(){
+    //     this.BMI=Math.floor( this.mass / this.height **2);
+    //      return this.BMI;
+    //    },
+    //    getdetails:function(){
+    //     return`${this.firstName} BMI ${this.calBMI()} `
+    //   }
+    //  }
+    //  const jonasmith = {
+    //   firstName : 'jonas',
+    //   lastName : 'smith',
+    //   mass :'92',
+    //   height : '1.9',
+    //   calBMI : function(){
+    //    this.BMI=Math.floor( this.mass / this.height **2);
+    //     return this.BMI;
+    //   },
+    //   getdetails:function(){
+    //     return`${this.firstName} BMI ${this.calBMI()} `
+    //   }
+    //  };
+    //  console.log(jonasmith.getdetails());
+    //  console.log(Markmiler.getdetails());
+    //  if(jonasmith.BMI > Markmiler.BMI){
+    //   console.log(`jona BMI is ${jonasmith.BMI} greater`)
+    //  }else{
+    //   console.log(`mark has ${Markmiler.BMI} greater BMI`);
+    //  };
+    //  ************************Loops************
+  // for (let rep = 1; rep <=10; rep++){
+  //   console.log(`Umar has ${rep} cars`)
+  //};
+  const Umar = [
+    'umar',
+    'khan',
+     2037 - 1999,
+     'teacher',
+     ['mohsin','sunny','usama'],
+     true,      
+  ];
+  types=[]
+  for(let i=[0]; i < Umar.length; i++){
+    console.log(Umar[i], typeof Umar[i]);
+    // types = typeof Umar[i];
+    types.push (typeof Umar[i]);
+  };
+  console.log(types);
+  const years  = [  1999,2000,2002,2004]
+  age =[];
+for( i=0; i<years.length;i++){
+ 
+  age.push(2037-years[i])
+};
+console.log(age);
+// continue ad break...............
