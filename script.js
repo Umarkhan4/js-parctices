@@ -353,26 +353,42 @@
 //     if (dice === 6 )
 //  console.log(`congragulation you have got the 6`);
 //   };
-let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-let tips = [];
-let total = [];
-const caltip = function (bills) {
-  return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2;
-};
-for (let i = 0; i < bills.length; i++) {
-  const tip = Math.floor(caltip(bills[i]));
-  tips.push(tip);
-  total.push(tip + bills[i]);
-}
-//  console.log(`${tips}`);
-console.log(bills, tips, total);
+// let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// let tips = [];
+// let total = [];
+// const caltip = function (bills) {
+//   return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2;
+// };
+// for (let i = 0; i < bills.length; i++) {
+//   const tip = Math.floor(caltip(bills[i]));
+//   tips.push(tip);
+//   total.push(tip + bills[i]);
+// }
+// //  console.log(`${tips}`);
+// console.log(bills, tips, total);
 
-let calAverage = function (arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    // sum = sum + arr[i];
-    sum += arr[i];
+// let calAverage = function (arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     // sum = sum + arr[i];
+//     sum += arr[i];
+//   }
+//   return sum / arr.length;
+// };
+// console.log(calAverage(total));
+// .............problem solving.....
+const temperature =[3,-2,-6,-1,'error',9,13,17,15,14,9,5];
+const calTempertureAmplitude = function(temp){
+  let max = temp[0];
+  let min = temp[0];
+  for(let i=0; i < temp.length; i++){
+    let currTemp = temp[i];
+    if (typeof currTemp!=='number') continue;
+    if (currTemp  > max) max = currTemp ;
+    if (currTemp  < min) min = currTemp ;
   }
-  return sum / arr.length;
-};
-console.log(calAverage(total));
+console.log(max,min);
+return max - min;
+}
+const amplitude = calTempertureAmplitude(temperature); 
+console.log(amplitude);
