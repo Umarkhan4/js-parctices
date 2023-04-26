@@ -377,18 +377,34 @@
 // };
 // console.log(calAverage(total));
 // .............problem solving.....
-const temperature =[3,-2,-6,-1,'error',9,13,17,15,14,9,5];
-const calTempertureAmplitude = function(temp){
-  let max = temp[0];
-  let min = temp[0];
-  for(let i=0; i < temp.length; i++){
-    let currTemp = temp[i];
-    if (typeof currTemp!=='number') continue;
-    if (currTemp  > max) max = currTemp ;
-    if (currTemp  < min) min = currTemp ;
-  }
-console.log(max,min);
-return max - min;
-}
-const amplitude = calTempertureAmplitude(temperature); 
-console.log(amplitude);
+// const temperature =[3,-2,-6,-1,'error',9,13,17,15,14,9,5]; 
+// const calTempertureAmplitude = function(t1,t2){
+//   const temp = t1.concat(t2);
+//   console.log(temp);
+//   let max = temp[0];
+
+//   let min = temp[0];
+//   for(let i=0; i < temp.length; i++){
+//     let currTemp = temp[i];
+//     if (typeof currTemp!=='number') continue;
+//     if (currTemp  > max) max = currTemp ;
+//     if (currTemp  < min) min = currTemp ;
+//   }
+// console.log(max,min);
+// return max - min;
+// }
+// const amplitude = calTempertureAmplitude([8,7,6],[9,5,4]); 
+// console.log(amplitude);
+// ...........challenges......
+// const data =[17,21,23];
+// const printForcost =function(arr){
+//   let str =''
+//   for(let i=0;i < arr.length;i++){
+//   str += `${data[i]} degrees in ${[i+1]} ... `;
+// }
+// console.log('...' + str);
+// };
+//  printForcost(data);
+'use strict';
+console.log(document.querySelector('.message').textContent);
+document.querySelector('.message').textContent = 'correct Number!'
