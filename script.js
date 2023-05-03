@@ -488,7 +488,23 @@
 //   document.querySelector('.guess').value ='';
 //   document.querySelector('body').style.backgroundColor ='#222'
 //       document.querySelector('.number').style.width ='15rem'
-//       document.querySelector('.number').textContent = "?";
+      // document.querySelector('.number').textContent = "?";
 
 // } )
 ///////////////////////////show Model project////////////////////////////
+const model = document.querySelector('.modal');
+const close  = document.querySelector('.close-modal');
+const overlay = document.querySelector('.overlay');
+const showModal = document.querySelectorAll('.show-modal');
+for ( let i = 0; i < showModal.length; i++)
+showModal[i].addEventListener('click',function(){
+console.log('button click');
+model.classList.remove('hidden');
+overlay.classList.remove('hidden');
+});
+const closemodel=function(){
+  model.classList.add('hidden');
+overlay.classList.add('hidden');
+}
+close.addEventListener('click',closemodel);
+overlay.addEventListener('click',closemodel);
