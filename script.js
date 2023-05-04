@@ -561,7 +561,7 @@ btnRoll.addEventListener('click',function(){
    const dice = Math.floor(Math.random()*6)+1; 
   // creating a dice
    diceEl.classList.remove('hidden');
-   diceEl.src =`dice-${dice}.png`
+   diceEl.src =`images/dice-${dice}.png`
   //checking if the dice is 1 if not then switch to the other player
    if (dice !=1){
      currentscore = currentscore + dice;
