@@ -492,19 +492,102 @@
 
 // } )
 ///////////////////////////show Model project////////////////////////////
-const model = document.querySelector('.modal');
-const close  = document.querySelector('.close-modal');
-const overlay = document.querySelector('.overlay');
-const showModal = document.querySelectorAll('.show-modal');
-for ( let i = 0; i < showModal.length; i++)
-showModal[i].addEventListener('click',function(){
-console.log('button click');
-model.classList.remove('hidden');
-overlay.classList.remove('hidden');
-});
-const closemodel=function(){
-  model.classList.add('hidden');
-overlay.classList.add('hidden');
+// const model = document.querySelector('.modal');
+// const close  = document.querySelector('.close-modal');
+// const overlay = document.querySelector('.overlay');
+// const showModal = document.querySelectorAll('.show-modal');
+// const closemodel=function(){
+//   model.classList.add('hidden');
+// overlay.classList.add('hidden');
+// }
+// const openmodel = function(){
+//   model.classList.remove('hidden');
+// overlay.classList.remove('hidden');
+// }
+// for ( let i = 0; i < showModal.length; i++)
+// showModal[i].addEventListener('click',openmodel);
+// close.addEventListener('click',closemodel);
+// overlay.addEventListener('click',closemodel);
+
+// document.addEventListener("keydown",function(e) {
+// console.log(e.key);
+// if (e.key==='Escape' && !model.classList.contains('hidden')){
+//   closemodel();
+// }
+// });
+/////////////////////////////*******pig Game ************////////////////
+const scoreEl0=document.querySelector('#score--0');
+const scoreEl1=document.querySelector('#score--1');
+const diceEl =document.querySelector(".dice");
+const btnNew =document.querySelector('.btn--new');
+const btnRoll =document.querySelector('.btn--roll');
+const btnHold =document.querySelector('.btn--hold');
+const currentscore0EL =document.getElementById('current--0');
+const currentscore1EL =document.getElementById('current--1');
+const player0El =document.querySelector('.player--0');
+const player1El =document.querySelector('.player--1');
+///starting elements///
+let scores,currentscore,activeplayer,playing;
+const inti =function(){
+
+  scoreEl0.textContent=0;
+  scoreEl1.textContent=0;
+  diceEl.classList.add('hidden');
+   scores = [0,0];
+   currentscore = 0;
+   activeplayer =0;
+  playing =true; 
+   document.getElementById('current--0').textContent=0;
+  document.getElementById('current--1').textContent=0;
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  player0El.classList.add('player--active');
+  player1El.classList.remove('player--winner');
 }
-close.addEventListener('click',closemodel);
-overlay.addEventListener('click',closemodel);
+inti();
+
+const switchPlayer = function(){
+  document.getElementById (`current--${activeplayer}`).textContent=0;
+  currentscore=0;
+  activeplayer = activeplayer===0 ? 1:0;
+  player0El.classList.toggle('player--active');
+ player1El.classList.toggle('player--active');
+
+}
+// creating dice////
+btnRoll.addEventListener('click',function(){
+  if(playing){
+  // generating a radom dice 
+   const dice = Math.floor(Math.random()*6)+1; 
+  // creating a dice
+   diceEl.classList.remove('hidden');
+   diceEl.src =`dice-${dice}.png`
+  //checking if the dice is 1 if not then switch to the other player
+   if (dice !=1){
+     currentscore = currentscore + dice;
+     document.getElementById (`current--${activeplayer}`).textContent=currentscore;   
+   }else{
+   switchPlayer();
+   }
+  }
+})
+//////checking if the score of the player reached 100 or not///////////
+btnHold.addEventListener('click',function(){
+  if(playing){
+   scores[activeplayer]+=currentscore;
+   
+   document.getElementById (`score--${activeplayer}`).textContent= scores[activeplayer];   
+//checking if the scpre is 100
+if (scores[activeplayer]>=20){
+  playing=false;
+  diceEl.classList.add('hidden');
+  document.querySelector(`.player--${activeplayer}`).classList.add('player--winner');
+  document.querySelector(`.player--${activeplayer}`).classList.remove('player--active ');
+}else{
+  // switching anf holding 
+  switchPlayer();
+
+}
+  }
+});
+btnNew.addEventListener('click',inti);
